@@ -1,0 +1,13 @@
+Postgres container image running on Alpine Linux by Yobasystems
+
+build docker image 'yobasystems/alpine-postgres' from Dockerfile
+docker build -t postgres-alpine .
+
+run container 'postgres-alpine' in background 
+docker run --rm -d --name postgres-alpine yobasystems/alpine-postgres
+
+connect to container in ash shell
+docker exec -it postgres-alpine ash
+
+connect user postgres to the postgres database inside of container
+psql -U postgres -d postgres
